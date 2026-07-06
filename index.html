@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hammad Tayyab</title>
-  <meta name="description" content="Portfolio of Hammad Tayyab — Software Engineering student at GIKI, ML Intern at FlyRank AI. Builder of AI agents, hackathon projects, and full-stack apps.">
+  <meta name="description" content="Portfolio of Hammad Tayyab — Software Engineering student at GIKI. Builder of AI agents, hackathon projects, and full-stack apps.">
   <meta name="author" content="Hammad Tayyab">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -591,14 +591,15 @@
       margin-left: 10px;
     }
 
-    /* ===== EXPERIENCE ===== */
-    .exp-entry {
+    /* ===== EDUCATION ===== */
+    .edu-entry {
       display: flex;
       align-items: baseline;
       gap: 24px;
+      flex-wrap: wrap;
     }
 
-    .exp-year {
+    .edu-year {
       font-size: 0.78rem;
       color: var(--fg-muted);
       min-width: 100px;
@@ -606,12 +607,12 @@
       transition: color 0.4s;
     }
 
-    .exp-content {
+    .edu-content {
       position: relative;
       padding-left: 24px;
     }
 
-    .exp-content::before {
+    .edu-content::before {
       content: '';
       position: absolute;
       left: 0;
@@ -620,16 +621,9 @@
       height: 8px;
       background: var(--accent);
       border-radius: 50%;
-      animation: heartbeat 2s ease-in-out infinite;
     }
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      30% { transform: scale(1.4); }
-      60% { transform: scale(1); }
-    }
-
-    .exp-role {
+    .edu-degree {
       font-family: var(--font-display);
       font-size: 1.2rem;
       font-weight: 700;
@@ -637,8 +631,76 @@
       transition: color 0.4s;
     }
 
-    .exp-company {
+    .edu-school {
       color: var(--accent);
+    }
+
+    .edu-location {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      margin-top: 4px;
+      transition: color 0.4s;
+    }
+
+    /* ===== CERTIFICATIONS ===== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .cert-card:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .cert-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 4px;
+      transition: color 0.4s;
+    }
+
+    .cert-issuer {
+      font-size: 0.78rem;
+      color: var(--fg-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      transition: color 0.4s;
+    }
+
+    .cert-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cert-link-btn {
+      font-size: 0.72rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 12px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .cert-link-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-soft);
     }
 
     /* ===== CONTACT ===== */
@@ -830,7 +892,7 @@
     <div class="container">
       <h2 class="section-heading fade-in">About</h2>
       <p class="about-text fade-in">
-        Software Engineering undergrad at GIKI (Batch 2029) who thrives at hackathons and builds AI-powered tools that solve real problems. Currently interning at FlyRank AI, building agentic tools and learning machine learning from Stanford.
+        Software Engineering undergrad at GIKI (Batch 2025), sharpening my skills in machine learning and agentic AI by building things like an autonomous trading agent and a micro-escrow platform for Pakistan's informal labor market.
       </p>
       <div class="status-pill fade-in">
         <div class="status-dot"></div>
@@ -864,7 +926,6 @@
           <span class="skill-tag">LLMs</span>
           <span class="skill-tag">Agentic AI</span>
           <span class="skill-tag">Agents</span>
-          <span class="skill-tag">Supervised Learning</span>
           <span class="skill-tag">NLP</span>
           <span class="skill-tag">Data Analysis</span>
           <span class="skill-tag">Pandas</span>
@@ -889,7 +950,6 @@
           <span class="skill-tag">GitHub</span>
           <span class="skill-tag">Linux</span>
           <span class="skill-tag">API Integration</span>
-          <span class="skill-tag">Printify</span>
         </div>
       </div>
     </div>
@@ -965,15 +1025,89 @@
 
   <hr class="divider container">
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
+  <!-- EDUCATION -->
+  <section id="education">
     <div class="container">
-      <h2 class="section-heading fade-in">Experience</h2>
-      <div class="exp-entry fade-in">
-        <span class="exp-year">2026 — Present</span>
-        <div class="exp-content">
-          <p class="exp-role">ML Intern — <span class="exp-company">FlyRank AI</span></p>
+      <h2 class="section-heading fade-in">Education</h2>
+      <div class="edu-entry fade-in">
+        <span class="edu-year">2025 — Present</span>
+        <div class="edu-content">
+          <p class="edu-degree">BS Software Engineering — <span class="edu-school">GIKI</span></p>
+          <p class="edu-location">Ghulam Ishaq Khan Institute, Rawalpindi, Pakistan</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider container">
+
+  <!-- CERTIFICATIONS & HACKATHONS -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-heading fade-in">Certifications & Hackathons</h2>
+      <div class="cert-grid fade-in">
+
+        <div class="cert-card">
+          <p class="cert-title">AI Trading Agents Hackathon</p>
+          <p class="cert-issuer">lablab.ai</p>
+          <div class="cert-links">
+            <a href="https://lablab.ai/u/@Hammad_Tayyab/ai-hackathons/ai-trading-agents/certificate" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+            <a href="https://github.com/hammad-tayyab/Trading-agent-harold-of-hackathon-" target="_blank" rel="noopener" class="cert-link-btn">View Project</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Micathon (Hackathon)</p>
+          <p class="cert-issuer">Microsoft Club — GIKI</p>
+          <div class="cert-links">
+            <!-- TODO: confirm exact certificate file path once pushed -->
+            <a href="#" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+            <a href="https://github.com/hammad-tayyab/micathon" target="_blank" rel="noopener" class="cert-link-btn">View Project</a>
+            <a href="https://nighaban-micro-escrow-platform.vercel.app/" target="_blank" rel="noopener" class="cert-link-btn">Live</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Make Agentic AI Work for You</p>
+          <p class="cert-issuer">IBM</p>
+          <div class="cert-links">
+            <a href="https://www.credly.com/badges/8dcacde5-8f25-4848-8388-bb25d044c6ec/linked_in_profile" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Google Data Analysis with Python Specialization</p>
+          <p class="cert-issuer">Google</p>
+          <div class="cert-links">
+            <a href="https://www.coursera.org/account/accomplishments/specialization/MEMS5CSR3FFU" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Claude 101</p>
+          <p class="cert-issuer">Anthropic</p>
+          <div class="cert-links">
+            <a href="https://verify.skilljar.com/c/w7ec92zmjdh5" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Google AI Essentials Specialization</p>
+          <p class="cert-issuer">Google</p>
+          <div class="cert-links">
+            <a href="https://www.coursera.org/account/accomplishments/specialization/JRORJF1D3NOA" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-title">Hackgit V2 Agentic AI (Hackathon)</p>
+          <p class="cert-issuer">Google Developer Group — GIKI</p>
+          <div class="cert-links">
+            <!-- TODO: confirm exact certificate file path once pushed -->
+            <a href="#" target="_blank" rel="noopener" class="cert-link-btn">View Certificate</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -993,7 +1127,7 @@
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           <span class="label">LinkedIn</span>
         </a>
-        <a href="javascript:void(0)" class="contact-item" id="contact-email" onclick="copyEmail()">
+        <a href="mailto:hammadtayyab.work@gmail.com" class="contact-item" id="contact-email" onclick="copyEmail()">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <span class="label">hammadtayyab.work@gmail.com</span>
         </a>
@@ -1163,9 +1297,8 @@
     /* ===== SUBTITLE TYPEWRITER ===== */
     const subtitleEl = document.getElementById('hero-subtitle');
     const subtitles = [
-      'ML Intern @ FlyRank AI',
       'Hackathon Builder',
-      "GIKI Software Engineering '29"
+      "GIKI Software Engineering '25"
     ];
     let subIdx = 0;
     let charIdx = 0;
